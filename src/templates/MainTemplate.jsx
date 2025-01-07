@@ -24,8 +24,8 @@ const MainTemplate = (props) => {
 
   return (
     <>
-      <div className="dark:bg-slate-950 dark:text-white text-black">
-        <div className="container mx-auto py-6 px-5 md:px-10 xl:px-56 flex flex-col min-h-screen">
+      <div className="text-black dark:bg-slate-950 dark:text-white">
+        <div className="container flex flex-col min-h-screen px-5 py-6 mx-auto md:px-10 xl:px-56">
           <main className="flex-grow">
             {/* Header */}
             <div className="flex justify-between">
@@ -68,48 +68,53 @@ const MainTemplate = (props) => {
 
             {/* Sidebar */}
             {isMobile && isSidebarOpen && (
-              <div className="z-30 fixed top-0 left-0 w-full h-screen bg-black px-5 py-6 text-center">
-                <div className="flex flex-col h-full">
-                  {/* Content Section */}
-                  <div className="flex-grow">
-                    <button
-                      onClick={() => sideBarToggle()}
-                      className="absolute right-4 top-6 text-white"
-                    >
-                      <i className="fa-solid fa-xmark"></i>
-                    </button>
-                    <ul className="flex flex-col gap-7">
-                      <li>
-                        <a href="#" className="text-white">
-                          Project
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#" className="text-white">
-                          Blog
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#" className="text-white">
-                          Contact me
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
+              <>
+                <div className="fixed top-0 left-0 w-screen h-screen bg-black opacity-30"></div>
+                <div className="fixed top-0 right-0 z-30 w-3/4 h-screen px-5 py-6 text-center bg-slate-950">
+                  <div className="flex flex-col h-full">
+                    {/* Content Section */}
+                    <div className="flex-grow">
+                      <button
+                        onClick={() => sideBarToggle()}
+                        className="absolute text-white right-4 top-6"
+                      >
+                        <i className="fa-solid fa-xmark"></i>
+                      </button>
+                      <ul className="flex flex-col gap-7">
+                        <li>
+                          <a href="#" className="text-white">
+                            Project
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" className="text-white">
+                            Blog
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" className="text-white">
+                            Contact me
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
 
-                  {/* Footer Section */}
-                  <footer className="text-white text-sm sm:text-base">Fadela Numah Kadenza</footer>
+                    {/* Footer Section */}
+                    {/* <footer className="text-sm text-white sm:text-base">Fadela Numah Kadenza</footer> */}
+                  </div>
                 </div>
-              </div>
+              </>
             )}
             {/* Sidebar end */}
 
             {/* Main */}
-            <div className='mt-5'>{children}</div>
+            <div className="mt-5">{children}</div>
             {/* Main end */}
           </main>
           {/* Footer */}
-          <footer className="text-center pt-5 text-sm sm:text-base">Fadela Numah Kadenza</footer>
+          <footer className="pt-5 text-sm text-center sm:text-base">
+            Fadela Numah Kadenza
+          </footer>
           {/* Footer */}
         </div>
       </div>
