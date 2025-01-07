@@ -1,4 +1,5 @@
 import {useState, useEffect} from "react";
+import {Link} from "react-router-dom";
 
 const MainTemplate = (props) => {
   const {darkModeHandler, isDarkModeActive, setIsDarkModeActive, children} =
@@ -30,20 +31,22 @@ const MainTemplate = (props) => {
             {/* Header */}
             <div className="flex justify-between">
               <div>
-                <h1 className="text-base md:text-xl">Fadel</h1>
+                <Link to="/">
+                  <h1 className="text-base md:text-xl">Fadel</h1>
+                </Link>
               </div>
               <div>
                 <div className="flex gap-10">
                   {!isMobile && (
                     <ul className="flex gap-10">
                       <li>
-                        <a href="#">Project</a>
+                        <Link to="/projects">Project</Link>
                       </li>
                       <li>
-                        <a href="#">Blog</a>
+                        <Link to="/blogs">Blog</Link>
                       </li>
                       <li>
-                        <a href="#">Contact me</a>
+                        <Link to="/contact-me">Contact me</Link>
                       </li>
                     </ul>
                   )}
@@ -82,19 +85,19 @@ const MainTemplate = (props) => {
                       </button>
                       <ul className="flex flex-col gap-7">
                         <li>
-                          <a href="#" className="text-white">
+                          <Link to="/projects" className="text-white">
                             Project
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a href="#" className="text-white">
+                          <Link to="/blogs" className="text-white">
                             Blog
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a href="#" className="text-white">
+                          <Link to="/contact-me" className="text-white">
                             Contact me
-                          </a>
+                          </Link>
                         </li>
                       </ul>
                     </div>
