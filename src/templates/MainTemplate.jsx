@@ -49,7 +49,7 @@ const MainTemplate = (props) => {
                   )}
                   <div className="flex gap-5">
                     <button onClick={() => darkModeHandler()}>
-                      {isDarkModeActive ? (
+                      {!isDarkModeActive ? (
                         <i className="fa-regular fa-moon"></i>
                       ) : (
                         <i className="fa-regular fa-sun"></i>
