@@ -12,16 +12,16 @@ import PostgreSqlLogo from "/PostgreSQL-Logo.wine.png";
 
 const StackLogoList = () => {
   return (
-    <div className="flex flex-wrap items-center gap-2 -mx-5 gap-y-5">
-      <StackLogo src={LaravelLogo} alt="laravel logo" />
-      <StackLogo src={MySqlLogo} alt="MySQL logo" />
-      <StackLogo src={NodeJsLogo} alt="NodeJS logo" />
-      <StackLogo src={ExpressJsLogo} alt="ExpressJs logo" className="mx-2" />
-      <StackLogo src={ReactJsLogo} alt="ReactJS logo" />
-      <StackLogo src={BootstrapLogo} alt="Bootstrap logo" />
-      <StackLogo src={PythonLogo} alt="Python logo" size="max-h-12" />
-      <StackLogo src={TailwindCSSLogo} alt="TailwindCSS logo" size="max-h-7" />
-      <StackLogo src={PostgreSqlLogo} alt="PostgreSQL logo" />
+    <div className="flex flex-wrap items-center gap-4 -mx-5 gap-y-5">
+      <StackLogo title='Laravel' src={LaravelLogo} alt="laravel logo" />
+      <StackLogo title='MySQL' src={MySqlLogo} alt="MySQL logo" />
+      <StackLogo title='NodeJS' src={NodeJsLogo} alt="NodeJS logo" />
+      <StackLogo title='ExressJS' src={ExpressJsLogo} alt="ExpressJs logo" className="ms-1" />
+      <StackLogo title='ReactJS' src={ReactJsLogo} alt="ReactJS logo" />
+      <StackLogo title='Bootstrap' src={BootstrapLogo} alt="Bootstrap logo" />
+      <StackLogo title='Python' src={PythonLogo} alt="Python logo" size="max-h-12" />
+      <StackLogo title='TailwindCSS' src={TailwindCSSLogo} alt="TailwindCSS logo" size="max-h-7" />
+      <StackLogo title='PostgreSQL' src={PostgreSqlLogo} alt="PostgreSQL logo" />
     </div>
   );
 };
