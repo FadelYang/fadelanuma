@@ -1,24 +1,37 @@
 import {useState} from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
-import Home from "./pages/Home"
+import {Route, Routes} from "react-router-dom";
+import Home from "./pages/Home";
+import Project from "./pages/UnderConstruction";
+import {useDarkMode} from "./context/DarkModeContext"
 
 function App() {
-  const [isDarkModeActive, setIsDarkModeActive] = useState(true);
-
-  const darkModeHandler = () => {
-    setIsDarkModeActive(!isDarkModeActive);
-    document.body.classList.toggle("dark");
-  };
+  const {isDarkModeActive, setIsDarkModeActive, darkModeHandler} = useDarkMode(true);
 
   return (
-    <>
-      <Home
-        isDarkModeActive={isDarkModeActive}
-        setIsDarkModeActive={setIsDarkModeActive}
-        darkModeHandler={darkModeHandler}
+    <Routes>
+      <Route
+        path="/"
+        element={
+          <Home
+            isDarkModeActive={isDarkModeActive}
+            setIsDarkModeActive={setIsDarkModeActive}
+            darkModeHandler={darkModeHandler}
+          />
+        }
       />
-    </>
+      <Route
+        path="/projects"
+        element={
+          <Project
+            isDarkModeActive={isDarkModeActive}
+            setIsDarkModeActive={setIsDarkModeActive}
+            darkModeHandler={darkModeHandler}
+          />
+        }
+      />
+    </Routes>
   );
 }
 
