@@ -8,6 +8,7 @@ import Home from "./pages/Home";
 import Project from "./pages/UnderConstruction";
 import Blog from "./pages/UnderConstruction";
 import ContactMe from "./pages/UnderConstruction";
+import NotFound from "./pages/NotFound";
 
 function App() {
   const {isDarkModeActive, setIsDarkModeActive, darkModeHandler} =
@@ -49,6 +50,16 @@ function App() {
         path="/contact-me"
         element={
           <Project
+            isDarkModeActive={isDarkModeActive}
+            setIsDarkModeActive={setIsDarkModeActive}
+            darkModeHandler={darkModeHandler}
+          />
+        }
+      />
+      <Route
+        path="*"
+        element={
+          <NotFound
             isDarkModeActive={isDarkModeActive}
             setIsDarkModeActive={setIsDarkModeActive}
             darkModeHandler={darkModeHandler}

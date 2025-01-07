@@ -12,7 +12,7 @@ const Home = (props) => {
         isDarkModeActive={isDarkModeActive}
         setIsDarkModeActive={setIsDarkModeActive}
       >
-        <div className="mt-10 sm:mt-32">
+        <div className="mt-10 sm:mt-20 md:mt-32">
           <div className="">
             <h1 className="text-4xl font-bold">Hello, my name is Fadel</h1>
             <h2 className="mt-2 text-base">
