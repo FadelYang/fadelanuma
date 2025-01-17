@@ -12,7 +12,7 @@ import PostgreSqlLogo from "/PostgreSQL-Logo.wine.png";
 
 const StackLogoList = () => {
   return (
-    <div className="flex flex-wrap items-center gap-4 -mx-5 gap-y-5">
+    <div className="flex flex-wrap items-center gap-4 -mx-5 gap-y-5 w-full">
       <StackLogo title='Laravel' src={LaravelLogo} alt="laravel logo" />
       <StackLogo title='MySQL' src={MySqlLogo} alt="MySQL logo" />
       <StackLogo title='NodeJS' src={NodeJsLogo} alt="NodeJS logo" />
