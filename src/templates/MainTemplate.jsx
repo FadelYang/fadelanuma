@@ -26,7 +26,7 @@ const MainTemplate = (props) => {
   return (
     <>
       <div className="text-black dark:bg-slate-950 dark:text-white">
-        <div className="container flex flex-col min-h-screen px-5 py-6 mx-auto md:px-10 xl:px-56">
+        <div className="container flex flex-col min-h-screen px-5 pt-6 mx-auto md:px-10 xl:px-56">
           <main className="flex-grow">
             {/* Header */}
             <div className="flex justify-between">
@@ -115,7 +115,7 @@ const MainTemplate = (props) => {
             {/* Main end */}
           </main>
           {/* Footer */}
-          <footer className="pt-5 text-sm text-center sm:text-base">
+          <footer className="pt-5 text-sm text-center sm:text-base ">
             Fadela Numah Kadenza
           </footer>
           {/* Footer */}

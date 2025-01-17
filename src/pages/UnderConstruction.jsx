@@ -12,9 +12,9 @@ const UnderConstruction = (props) => {
         isDarkModeActive={isDarkModeActive}
         setIsDarkModeActive={setIsDarkModeActive}
       >
-        <div className="flex flex-col items-center justify-center h-screen gap-10 -my-28">
+        <div className="flex flex-col items-center justify-center h-screen gap-10 -my-20">
           <div>
-            <img src={CodingCatImage} alt="funny coding cat" className="h-96" />
+            <img src={CodingCatImage} alt="funny coding cat" className="h-72" />
           </div>
           This page is under construction...
           <div className="-my-3">
