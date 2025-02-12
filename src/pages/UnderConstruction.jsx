@@ -29,9 +29,9 @@ const UnderConstruction = (props) => {
             )}
             {window.location.pathname === "/projects" && (
               <>
-                <p className='max-w-96'>
-                  Please visit my GitHub to
-                  check out my latest projects :)
+                <p className="max-w-[500px]">
+                  Please visit my GitHub to check out my latest projects, or my
+                  portfolio decks I made in Canva :)
                 </p>
               </>
             )}
@@ -44,22 +44,33 @@ const UnderConstruction = (props) => {
               Home
             </Link>
             {window.location.pathname === "/projects" && (
-              <a
-                href="https://github.com/FadelYang/"
-                target="_blank"
-                className="px-4 py-2 border rounded border-white rouded bg-black text-white"
-              >
-                GitHub
-              </a>
+              <>
+                <a
+                  href="https://github.com/FadelYang/"
+                  target="_blank"
+                  className="px-4 py-2 border rounded border-white rouded bg-black text-white"
+                >
+                  GitHub
+                </a>
+                <a
+                  href="https://www.canva.com/design/DAF1B7OWYUQ/_Ta5BzrcpeAOUYMoVlSBBg/edit?utm_content=DAF1B7OWYUQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
+                  target="_blank"
+                  className="px-4 py-2 border rounded border-black dark:border-white rouded  bg-[#20C4CB] text-white"
+                >
+                  Canva
+                </a>
+              </>
             )}
             {window.location.pathname === "/contact-me" && (
-              <a
-                href="https://www.linkedin.com/in/fadela-numah-kadenza-0305751ab/"
-                target="_blank"
-                className="px-4 py-2 border rounded border-black dark:border-white rouded  bg-[#0072B1] text-white"
-              >
-                LinkedIn
-              </a>
+              <>
+                <a
+                  href="https://www.linkedin.com/in/fadela-numah-kadenza-0305751ab/"
+                  target="_blank"
+                  className="px-4 py-2 border rounded border-black dark:border-white rouded  bg-[#0072B1] text-white"
+                >
+                  LinkedIn
+                </a>
+              </>
             )}
           </div>
         </div>
