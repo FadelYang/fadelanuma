@@ -47,7 +47,7 @@ const UnderConstruction = (props) => {
               <a
                 href="https://github.com/FadelYang/"
                 target="_blank"
-                className="px-4 py-2 border rounded border-white rouded dark:bg-black dark:text-white"
+                className="px-4 py-2 border rounded border-white rouded bg-black text-white"
               >
                 GitHub
               </a>
@@ -56,7 +56,7 @@ const UnderConstruction = (props) => {
               <a
                 href="https://www.linkedin.com/in/fadela-numah-kadenza-0305751ab/"
                 target="_blank"
-                className="px-4 py-2 border rounded border-white rouded bg-[#0072B1] text-white"
+                className="px-4 py-2 border rounded border-black dark:border-white rouded  bg-[#0072B1] text-white"
               >
                 LinkedIn
               </a>
