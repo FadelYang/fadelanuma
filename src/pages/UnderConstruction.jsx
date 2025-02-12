@@ -1,9 +1,9 @@
 import MainTemplate from "../templates/MainTemplate";
 import CodingCatImage from "/coding-cat-unsplash.webp";
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom";
 
 const UnderConstruction = (props) => {
-  const {darkModeHandler, isDarkModeActive, setIsDarkModeActive} = props;
+  const { darkModeHandler, isDarkModeActive, setIsDarkModeActive } = props;
 
   return (
     <>
@@ -14,16 +14,53 @@ const UnderConstruction = (props) => {
       >
         <div className="flex flex-col items-center justify-center h-screen gap-10 -my-20">
           <div>
-            <img src={CodingCatImage} alt="funny coding cat" className="h-72" />
+            <img
+              src={CodingCatImage}
+              alt="funny coding cat"
+              className="xl:h-64 2xl:h-72"
+            />
           </div>
-          This page is under construction...
-          <div className="-my-3">
+          <p className="text-center">
+            This page is under construction
+            {window.location.pathname === "/contact-me" && (
+              <>
+                <p>You can contact me via LinkedIn :)</p>
+              </>
+            )}
+            {window.location.pathname === "/projects" && (
+              <>
+                <p className='max-w-96'>
+                  Please visit my GitHub to
+                  check out my latest projects :)
+                </p>
+              </>
+            )}
+          </p>
+          <div className="-my-3 flex gap-2">
             <Link
               to="/"
               className="px-4 py-2 border border-black rounded dark:bg-white dark:text-black"
             >
               Home
             </Link>
+            {window.location.pathname === "/projects" && (
+              <a
+                href="https://github.com/FadelYang/"
+                target="_blank"
+                className="px-4 py-2 border rounded border-white rouded dark:bg-black dark:text-white"
+              >
+                GitHub
+              </a>
+            )}
+            {window.location.pathname === "/contact-me" && (
+              <a
+                href="https://www.linkedin.com/in/fadela-numah-kadenza-0305751ab/"
+                target="_blank"
+                className="px-4 py-2 border rounded border-white rouded bg-[#0072B1] text-white"
+              >
+                LinkedIn
+              </a>
+            )}
           </div>
         </div>
       </MainTemplate>
